@@ -44,12 +44,13 @@
 # text = 'какой то текст'
 
 # ======================================= ФУНКЦИИ
-def f(x):
-    if x == 1:
-        return 'целое'
-    elif x == 2.3:
-        return 23
-    else:
-        return 0
-
+# x = 2.3
+# def f(x):
+#     if x == 1:
+#         return 'целое'
+#     elif x == 2.3:
+#         return 23
+#     else:
+#         return 0
+# print(f(x))
 
