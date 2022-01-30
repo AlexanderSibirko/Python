@@ -1,14 +1,17 @@
-# 15. Дано число. Проверить кратно ли оно 7 и 23
+# 15. Написать программу получающую набор произведений чисел от 1 до N.
+# Пример: пусть N = 4, тогда
+# [ 1, 2, 6, 24 ]
 
-import random
+def Program():
+    num = int(input('Введите число N: '))
+    result = []
+    i=1
+    while i <= num:
+        if i == 1:
+            result.append(1)
+        else:
+            result.append(i*result[i-2])
+        i += 1
+    return result
 
-def KratOrNo(num_1, num_2):
-    a = random.randint(1, 99)
-    print(f'Рандомное число = {a}')
-    if a % num_2 == 0:
-        print(f'число {a} кратно {num_2}')
-    elif a % num_1 == 0:
-        print(f'число {a} кратно {num_1}')
-    else:
-        print(f'число {a} не кратно ни {num_1}, ни {num_2}')
-KratOrNo(7,23)
+print(Program())        
