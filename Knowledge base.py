@@ -70,7 +70,20 @@
 #     if 'read.py' in i:
 #         print(i)
 
+# str = 'какая то строка'
 # r.close()
+# a - открытие для добавления данных
+    # data = open('dile.txt', 'a')
+# r - открытие и чтение данных
+    # data = open('dile.txt', 'r')
+# w - открытие для записи данных
+    # data = open('dile.txt', 'w')
+# data.close()
+
+# with open('file.txt', 'w') as data:           # более компактно...и закроется автоматически
+#     data.write(f'{pos1}')
+#     data.write(f'\n{pos2}')
+
 
 # ======================  СТРОКИ =====================
 
