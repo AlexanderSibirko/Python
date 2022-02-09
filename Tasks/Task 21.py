@@ -1,12 +1,11 @@
-# 21. Программа проверяет пятизначное число на палиндромом
+# 21. Определить, позицию второго вхождения строки в списке либо сообщить, что её нет.
 
-def PolindromOrNo(num):
-    
-    numstr = str(num)
-    if numstr[0] == numstr[4]:
-        if numstr[1] == numstr[3]:
-            return 'Введенное число является палидромом'
+spis =  ["qwe", "asd", "zxc", "qwe", "ertqwe"]        
+num = 'qwe'
+def Position2(spis, num):
+
+    if spis.count(num) > 1 :
+        return spis.index(num,2)
     else:
-        return (f'Число {num} не палиндром!')
-print('Введите пятизначное число')
-print(PolindromOrNo(input()))
+        return -1
+print(Position2(spis,num))
