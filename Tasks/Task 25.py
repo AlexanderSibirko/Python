@@ -1,13 +1,22 @@
-# 25. Найти сумму чисел от 1 до А
+# 25. Написать программу преобразования десятичного числа в двоичное
 
-def Summa(num):
-    n = int(num)
-    sum = 0
-    count = 1
-    while count <= n:
-        sum += count
-        count += 1
-    return (f'Сумма чисел от 1 до {num} = {sum}')
+# num = 222
+# n = 56
+# result = []
+# while n >= 0:
+#     if num >= 2**n:
+#         num = num % 2**n
+#         result.append(1)
+#     else:
+#         if result == []:
+#             result.clear
+#         else:
+#             result.append(0)   
+#     n -= 1
 
-print('Введите число А: ')
-print(Summa(input()))
+# print(result)
+
+# ИЛИ
+num = 222
+result = bin(num)
+print(result)
