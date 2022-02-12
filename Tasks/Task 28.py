@@ -1,10 +1,21 @@
-# 28. Подсчитать сумму цифр в числе
+# 28. Найти корни квадратного уравнения Ax² + Bx + C = 0  1. Математикой 2. Используя дополнительные библиотеки*
+from cmath import sqrt
 
-def SummNumbers(num):
-    sum = 0
-    for i in num:
-        sum += int(i)
-    return (f'Сумма цифр в числе {num} = {sum}')
+A = 2
+B = 5
+C = 2
+D = B**2 - 4*A*C
+print(f'Дискриминант равен: {D}')
+if D < 0:
+    print('Дискрим отриц, корней нет')
+elif D == 0:
+    x = -B / 2*A
+    print(f'x равен: {x}')
+else:
+    x1 = (-B + sqrt(D)) / (2*A)
+    x2 = (-B - sqrt(D)) / (2*A)
+    print(sqrt(D))
+    print(f'У уравнения 2 корня: {x1} и {x2}')
 
-print('Введите число: ')
-print(SummNumbers(input()))
+
+
