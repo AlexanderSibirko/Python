@@ -1,5 +1,5 @@
 # 31. Составить список простых множителей натурального числа N
-def Factor(n):
+def Mnojiteli(n):
     Ans = []
     d = 2
     while d * d <= n:
@@ -14,5 +14,5 @@ def Factor(n):
         Ans.append(n)
         print('3')
     return Ans
-print(Factor(29))
+print(Mnojiteli(29))
 
