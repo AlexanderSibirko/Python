@@ -1,17 +1,15 @@
-# 29. Написать программу вычисления произведения чисел от 1 до N
+# 29. Найти НОК двух чисел
 
-# def ProizvedDoN(num):
-#     num = int(num)
-#     proiz = 1
-#     count = 1
-#     while count <= num:
-#         proiz *= count
-#         count += 1
-#     return (f'Произведение чисел от 1 до {num} = {proiz}')
+def NOD(a,b):
+    while(b>0):
+        a,b=b,a%b
+    return a
+print(NOD(2,7))
 
-# print('Введите число N: ')
-# print(ProizvedDoN(input()))
+def NOK(x,y):
+    return (x*y)//NOD(x,y)
 
+print(NOK(2,7))
 
 
 
