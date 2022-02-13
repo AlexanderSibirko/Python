@@ -1,18 +1,17 @@
 # 31. Составить список простых множителей натурального числа N
+
 def Mnojiteli(n):
-    Ans = []
+    res = []
     d = 2
     while d * d <= n:
         if n % d == 0:
-            Ans.append(d)
+            res.append(d)
             n //= d
-            print('1')
         else:
             d += 1
-            print('2')
     if n > 1:
-        Ans.append(n)
-        print('3')
-    return Ans
-print(Mnojiteli(29))
+        res.append(n)
+    return res
+
+
 
