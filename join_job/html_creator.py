@@ -17,3 +17,20 @@ def create(device =1):
         page.write(html)
 
     return html
+
+def new_create(data, device =1):
+    t,p,w = data
+    style = 'style = "font-size:30px;"'
+    html = '<html>\n <head></head>\n <bode>\n'
+    html +='    <p {}>Temperature: {} C</p>\n'\
+        .format(style, t)
+    html +='    <p {}>Wind_speed: {} м/c</p>\n'\
+        .format(style, w)
+    html +='    <p {}>Pressure: {} mmHg</p>\n'\
+        .format(style, p)
+    html += '   </bode>\n</html>'
+
+    with open('new_index.html', 'w') as page:
+        page.write(html)
+
+    return data
