@@ -9,15 +9,19 @@ def hi_command(update: Update, context: CallbackContext):
 
 list_gamers = []
 
-        
+def start_command(update: Update, context: CallbackContext):
+    log(update, context)
+    update.message.reply_text('Этот бот еще находится на этапе разработки. Список команд с описанием можно посмотреть по команде /help')       
 
 def help_command(update: Update, context: CallbackContext):
     log(update, context)
-    update.message.reply_text(f'/hi\n/time\n/help\n/sum')
+    update.message.reply_text(f'/hi - приветствует по имени\n/time - показывает текущее время\n/help - показывает список команд с описанием \n/sum - считает сумму из двух чисел, написать нужно через пробел (например /sum 25 76)')
     
 def time_command(update: Update, context: CallbackContext):
     log(update, context)
-    update.message.reply_text(f'{datetime.datetime.now().time()}')
+    current_time = datetime.datetime.now().time()
+    update.message.reply_text(f'{current_time.hour} часов {current_time.minute} минут и {current_time.second} секунд')
+
 
 def sum_command(update: Update, context: CallbackContext):
     log(update, context)
@@ -41,4 +45,6 @@ def start_game(update: Update, context: CallbackContext):
     current_user = update.effective_user.id
     if current_user == list_gamers[0]:
         for user_id in list_gamers:
-            context.bot.send_message(user_id, f'Игра началась\nВсего 100 конфет. Каждый игрок по очереди берет не более 10 конфет.\n Ходит игрок по имени {}')
+            context.bot.send_message(user_id, f'Игра началась\nВсего 100 конфет. Каждый игрок по очереди берет не более 10 конфет.\n Ходит игрок по имени')
+
+current_time = datetime.datetime.now().time()

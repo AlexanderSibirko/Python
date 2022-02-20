@@ -5,6 +5,7 @@ from bot_commands import *
 
 updater = Updater('5153530856:AAFo2poFM33Hkt6xvp6rQOUXVNbSZ9KPSg0')
 
+updater.dispatcher.add_handler(CommandHandler('start', start_command))
 updater.dispatcher.add_handler(CommandHandler('hi', hi_command))
 updater.dispatcher.add_handler(CommandHandler('time', time_command))
 updater.dispatcher.add_handler(CommandHandler('help', help_command))
